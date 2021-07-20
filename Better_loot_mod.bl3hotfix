@@ -738,6 +738,27 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_UpperHalf),/Game/PatchDLC/Raid1/GameData
 SparkCharacterLoadedEntry,(1,1,0,BPChar_MechRaidBossBar),/Game/PatchDLC/Raid1/GameData/Loot/ItemPool_RaidMiniBosses_Pool.ItemPool_RaidMiniBosses_Pool,BalancedItems[4].Weight,0,,(BaseValueConstant=2,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
 
 ###
+### Miscellaneous Pool Tweaks
+###
+
+# Have Hemovorous drop only a single Company Man
+# Using both Level and Char based hotfixes due to some oddities in Hemo's BPChar-loading behavior
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Varkid_RaidBoss),/Game/PatchDLC/Ixora2/GameData/Loot/UniqueEnemyDrops/ItemPool_Ixora2_VarkidRaidBoss.ItemPool_Ixora2_VarkidRaidBoss,BalancedItems.BalancedItems[3].Weight.BaseValueScale,0,,0
+SparkLevelPatchEntry,(1,1,0,SacrificeBoss_p),/Game/PatchDLC/Ixora2/GameData/Loot/UniqueEnemyDrops/ItemPool_Ixora2_VarkidRaidBoss.ItemPool_Ixora2_VarkidRaidBoss,BalancedItems.BalancedItems[3].Weight.BaseValueScale,0,,0
+
+# Buff up Hemovorous's non-unique drops
+# Using both Level and Char based hotfixes due to some oddities in Hemo's BPChar-loading behavior
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Varkid_RaidBoss),/Ixora2/Enemies/Varkid/_Unique/RaidBoss/_Design/Character/BPChar_Varkid_RaidBoss.BPChar_Varkid_RaidBoss_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPoolLists,0,,(ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"',ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"',ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"')
+SparkLevelPatchEntry,(1,1,0,SacrificeBoss_p),/Ixora2/Enemies/Varkid/_Unique/RaidBoss/_Design/Character/BPChar_Varkid_RaidBoss.BPChar_Varkid_RaidBoss_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPoolLists,0,,(ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"',ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"',ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"')
+
+# Buff up The Seer's non-unique drops
+SparkCharacterLoadedEntry,(1,1,0,BPChar_GuardianBrute_Redeemer),/Ixora2/Enemies/Guardian/Redeemer/_Design/Character/BPChar_GuardianBrute_Redeemer.BPChar_GuardianBrute_Redeemer_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPoolLists,0,,(ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"',ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"',ItemPoolListData'"/Game/PatchDLC/Ixora2/GameData/Loot/EnemyPools/ItemPoolList_Boss_Ixora2.ItemPoolList_Boss_Ixora2"')
+
+# Add in Badass gear drops to Gmork
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Gmork_B_Wolf_Child),/Hibiscus/Enemies/_Unique/Hunt_Gmork/Character/BPChar_Gmork_B_Wolf_Child.BPChar_Gmork_B_Wolf_Child_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPoolLists,0,,(ItemPoolListData'"/Game/GameData/Loot/ItemPools/ItemPoolList_BadassEnemyGunsGear.ItemPoolList_BadassEnemyGunsGear"')
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Gmork_B_Wolf_Child),/Hibiscus/Enemies/_Unique/Hunt_Gmork/Character/BPChar_Gmork_B_Wolf_Child.BPChar_Gmork_B_Wolf_Child_C:AIBalanceState_GEN_VARIABLE,PlayThroughs.PlayThroughs[0].DropOnDeathItemPools.ItemPoolLists,0,,(ItemPoolListData'"/Game/GameData/Loot/ItemPools/ItemPoolList_BadassEnemyGunsGear.ItemPoolList_BadassEnemyGunsGear"')
+
+###
 ### Bugfixes
 ###
 
